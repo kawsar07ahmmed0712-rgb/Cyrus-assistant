@@ -48,14 +48,6 @@ This project is designed for developers and users interested in building or usin
    pip install -r requirements.txt
    ```
 
-   **requirements.txt** (sample):
-   ```
-   streamlit>=1.0.0
-   google-generativeai  # For Gemini (optional)
-   ollama  # For Ollama (optional)
-   pydub  # For voice (optional)
-   # Add other deps as needed: uuid, json, subprocess, etc. (most are standard library)
-   ```
 
 3. Set up environment variables (e.g., in `.env`):
    - `JARVIS_API_KEY`: Your Google Gemini API key (optional).
