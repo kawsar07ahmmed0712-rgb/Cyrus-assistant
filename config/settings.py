@@ -1,18 +1,13 @@
 import os
-from dotenv import load_dotenv
+from dataclasses import dataclass
 
-
+@dataclass
 class Settings:
-    def __init__(self):
-        load_dotenv()
-        self.api_key = self._load_api_key()
-
-    @staticmethod
-    def _load_api_key() -> str:
-        api_key = os.getenv("GEMINI_API_KEY")
-        if not api_key:
-            raise EnvironmentError(
-                "GEMINI_API_KEY not found. Please set it in your .env file."
-            )
-        return api_key
+    """
+    Simple settings loader. Prefer environment variables for secrets.
+    """
+    api_key: str = os.environ.get("JARVIS_API_KEY", "")
+    gemini_model_name: str = os.environ.get("GEMINI_MODEL_NAME", "gemini-2.5-flash")
+    ollama_url: str = os.environ.get("OLLAMA_URL", "http://localhost:11434")
+    history_file: str = os.environ.get("JARVIS_HISTORY_FILE", "History.json")
 
