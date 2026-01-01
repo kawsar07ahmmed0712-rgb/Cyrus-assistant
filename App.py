@@ -482,4 +482,4 @@ if msgs and msgs[-1].get("role") == "user":
             rerun()
 
 st.markdown("---")
-st.caption("Jarvis — Enhanced UI: dark mode, avatars, animations, file uploads, session summary, more prompts/roles/tones, adjustable timeouts, sort order, downvote.")
+st.caption("Cyrus- dark mode, avatars, animations, file uploads, session summary, more prompts/roles/tones, adjustable timeouts, sort order, downvote.")
